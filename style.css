@@ -12,7 +12,7 @@ body {
   /* background-image: url(https://f2.toyhou.se/file/f2-toyhou-se/images/109506155_CLPtMPHNSBDmDDY.png); */
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
-  background-image: linear-gradient(#FFFFFF 0%, #8cff8c 20%, #8cff8c 80%, #000000 100%);
+  background-image: linear-gradient(#FFFFFF 0%, #8cff8c 20%, #8cff8c 95%, #000000 100%);
 }
 
 .background {
