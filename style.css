@@ -1,0 +1,116 @@
+html {
+  background-color: black;
+  color: #ff7aac;
+}
+
+body {
+  /* background-image: url(https://f2.toyhou.se/file/f2-toyhou-se/images/109506155_CLPtMPHNSBDmDDY.png); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  background-image: linear-gradient(#FFFFFF, #00ff00, #000000);
+}
+
+.background {
+  position: relative;
+  backdrop-filter: blur(64px);
+  border-radius: 16px;
+  overflow: hidden;
+align-items: center;
+  border: 8px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25);
+      overflow: hidden; 
+}
+
+table {
+  /* border: 1px solid #ccc; */
+  border-collapse: seperate;
+  border-spacing: 0;
+  border-radius: 8px;
+  color: rgb(40, 160, 40);
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      overflow: hidden; 
+}
+
+/* Optional: Add borders to individual cells for structure */
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  padding: 12px;
+}
+
+.background img {
+  display: block;
+  border-radius: 8px;
+}
+
+.class1 {
+  color: #00ff00;
+}
+
+@keyframes gradient-animation {
+  0% {left: 125%}
+  10% {left: -100%}
+  100% {left: -100%}
+}
+
+.litho {
+  color: rgb(40, 190, 40);
+  font-size: 48px;
+  /* text-shadow: #000000 0px 0px 1px; */
+}
+
+.class1::after {
+  content: "";
+  position: absolute;
+  left: 125%; /* Start position: off-screen to the left */
+  width: 75%;
+  height: 100%;
+  /* Angled gradient for the shine effect: transparent edges, white center */
+  background: linear-gradient(
+    45deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.9) 50%, 
+    transparent 100%
+  );
+  animation: gradient-animation 5s linear infinite;
+}
+
+.class1:hover::after {
+  left: -100%; /* End position: completely swiped across to the right */
+}
+
+.changing:before {
+  content: "thing 1";
+}
+.changing:hover:before {
+  content: "";
+}
+.changing:hover:after {
+  content: "thing 2";
+}
+
+
+.shy:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+  opacity: 0;
+}
+
+.shy:visited {
+  color: #ff7aac;
+}
+
+.divs {
+  /* backdrop-filter: blur(30px); */
+}
+
+svg:hover {
+  fill: red;
+}
