@@ -17,7 +17,7 @@ body {
 
 .background {
   position: relative;
-  backdrop-filter: blur(64px);
+  backdrop-filter: blur(8px);
   border-radius: 16px;
   overflow: hidden;
 align-items: center;
