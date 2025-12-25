@@ -3,36 +3,23 @@ html, body {
   padding: 0;
 }
 
-html {
-  background-color: black;
-  color: #ff7aac;
-}
-
 body {
-  /* background-image: url(https://f2.toyhou.se/file/f2-toyhou-se/images/109506155_CLPtMPHNSBDmDDY.png); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  background-image: linear-gradient(#FFFFFF 0%, #8cff8c 20%, #8cff8c 80%, #000000 100%);
+  color: rgb(40, 160, 40);
+  text-align: center;
+  background-image: linear-gradient(#FFFFFF 0%, #8cff8c 20%, #8cff8c 95%, #000000 100%);
 }
 
 .background {
-  position: relative;
-  backdrop-filter: blur(8px);
   border-radius: 16px;
-  overflow: hidden;
-align-items: center;
   border: 8px solid rgba(255, 255, 255, 0.25);
-
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.25);
-      overflow: hidden; 
 }
 
 table {
-  /* border: 1px solid #ccc; */
   border-collapse: seperate;
   border-spacing: 0;
-  border-radius: 8px;
+  border-radius: 16px;
   color: rgb(40, 160, 40);
   font-size: 24px;
   margin-bottom: 10px;
@@ -40,13 +27,38 @@ table {
   border: 1px solid rgba(255, 255, 255, 0.50);
   
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-      overflow: hidden; 
+      overflow: hidden;
+      width: 90%; margin: auto;
 }
 
-/* Optional: Add borders to individual cells for structure */
 th, td {
   border: 1px solid rgba(255, 255, 255, 0.50);
   padding: 12px;
+}
+
+.image {
+  z-index: 1;
+}
+
+img:hover {
+  transform: scale(1.50);
+  transition: transform 0.5s ease;
+}
+
+
+  body:has(img:hover) .overlay {
+    background: rgba(0,0,0,0.5);
+  }
+
+  body:has(img:hover) .header {
+    opacity: 0;
+  }
+  
+.overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  transition: background 0.3s;
 }
 
 .background img {
@@ -54,9 +66,6 @@ th, td {
   border-radius: 8px;
 }
 
-.class1 {
-  color: #00ff00;
-}
 
 @keyframes gradient-animation {
   0% {left: 125%}
@@ -65,30 +74,9 @@ th, td {
 }
 
 .litho {
-  color: rgb(40, 190, 40);
   font-size: 48px;
-  /* text-shadow: #000000 0px 0px 1px; */
 }
 
-.class1::after {
-  content: "";
-  position: absolute;
-  left: 125%; /* Start position: off-screen to the left */
-  width: 75%;
-  height: 100%;
-  /* Angled gradient for the shine effect: transparent edges, white center */
-  background: linear-gradient(
-    45deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.9) 50%, 
-    transparent 100%
-  );
-  animation: gradient-animation 5s linear infinite;
-}
-
-.class1:hover::after {
-  left: -100%; /* End position: completely swiped across to the right */
-}
 
 .changing:before {
   content: "thing 1";
@@ -118,4 +106,34 @@ th, td {
 
 svg:hover {
   fill: red;
+}
+
+
+
+
+
+
+
+.header {
+  color: #00ff00;
+  overflow: hidden;
+  transition: opacity 0.3s;
+  position: fixed;
+  white-space:nowrap;
+  top: 0;
+  left: 50%;
+  transform:translateX(-50%);
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 125%;
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.9) 50%, transparent 100%);
+  animation: gradient-animation 5s linear infinite;
 }
