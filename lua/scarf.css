@@ -1,0 +1,148 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgb(40, 160, 40);
+  text-align: center;
+  background-image: radial-gradient(circle at center, #ffe6ff 5% , #baae75 40%, #000000);
+}
+
+
+.circle {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  border-radius: 50%;
+  width: 816px;
+  height: 816px;
+  /* background: rgba( 255, 255, 255, 0.2); */
+  place-items: center;   /* centers content horizontally + vertically */
+  align-items: center;
+  justify-content: center;
+  animation: spen 45s linear infinite;
+}
+
+.q h1 {
+  font-size: 48px;
+  line-height: 0.2;
+  margin-bottom: 8px;
+}
+
+.q, img {
+  
+  animation: spen 45s linear infinite reverse;
+}
+
+.center {
+  border-radius: 50%;
+}
+
+.tm, .ml, .mr, .bm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  height: 75%;
+  background: rgba(255, 255, 255, 0.4); 
+  border-radius: 50%;
+  color: #ffd2e6;
+  border: 4px solid #ffd2e6;
+}
+
+.mr span {
+  background: linear-gradient(45deg, #fff430, #ffffff, #9c59d1, #000000);
+  background-clip: text;
+  color: transparent;
+}
+
+p {
+  font-size: 20px;
+}
+
+img {
+  transition: transform 1s;
+}
+
+img:hover {
+  transform: rotate(360deg);
+}
+
+@keyframes spen {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+.imgdiv, .q {
+  position: relative;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.imgdiv::before, .q::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #df6ec4,
+    #af8bd9,
+    #9596d9,
+    #89c7b0,
+    #f3edbd,
+    #df6ec4
+  );
+  z-index: -1;
+  animation: spen 45s linear infinite;
+}
+
+.q::before {
+  
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #fff430,
+    #ffffff,
+    #9c59d1,
+    #000000,
+    #fff430
+  );
+  z-index: -1;
+  animation: spen 45s linear infinite reverse;
+}
+
+.q:nth-child(2)::before {
+  background: conic-gradient(#ff218c, #ff218c, #ffd800, #ffd800, #21b1ff, #21b1ff, #ff218c);
+}
+
+.q:nth-child(4)::before {
+  background: conic-gradient(#3da542, #a7d379 20%, #ffffff, #a9a9a9, #000000, #3da542);
+}
+
+.q:nth-child(6)::before {
+  background: conic-gradient(#000000, #a3a3a3, #ffffff, #800080, #000000);
+}
+
+.center {
+  display: block;
+  border-radius: 50%;
+}
+ 
+.q::after {
+  content: "";
+  inset: 6px;
+  border-radius: 50%;
+  background: rgba(220, 220, 220, 0.8);
+  /* backdrop-filter: blur(100px); */
+  position: absolute;
+  z-index: 1;
+}
+
+.q h1, p {
+  z-index: 2;
+  filter: drop-shadow(0px 1px 2px black);
+}
