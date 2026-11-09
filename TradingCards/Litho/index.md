@@ -1,3 +1,7 @@
+---
+layout: page
+title: Litho.
+---
 # Litho
 ### General:
 - **Name:** Litho.
