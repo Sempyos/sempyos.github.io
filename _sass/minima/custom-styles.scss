@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,100..1000&display=swap');
+
+* {
+  font-family: "Google Sans Flex";
+}
+
+.post > .post-header {
+  display: none !important;
+}
+
+.site-header {
+  display: none;
+}
+
+.site-footer.h-card {
+  display: none;
+}
