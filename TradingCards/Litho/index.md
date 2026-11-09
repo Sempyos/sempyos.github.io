@@ -1,4 +1,5 @@
 # Litho
+
 ### General:
 - **Name:** Litho.
 - **Nicknames:** Li.
@@ -11,6 +12,7 @@
 - **Gender:** Agender.
 - **Sexuality:** Pan.
 - **Special:** Therian.
+
 ### Physical:
 - **Hair:** Tuft.
 - **Height:** III'VI".
@@ -21,9 +23,11 @@
   - **Length:** III'II".
   - **Width:** 'IV".
 - **Colors:** Green & Maine Coon Brindle & Lynx.
+
 ### Outfit:
 - Bandana.
 - Goggles Around Neck Or Forehead.
+
 ### Misc:
 - USE TONE INDICATORS FOR SARCASM.
 
